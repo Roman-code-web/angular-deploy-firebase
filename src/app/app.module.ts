@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { PagesModule } from './pages/pages.module';
 import { ComponentesModule } from './componentes/componentes.module';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ComponentesModule } from './componentes/componentes.module';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     PagesModule,
-    ComponentesModule
+    ComponentesModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
