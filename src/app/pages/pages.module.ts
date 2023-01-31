@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { ListaComponent } from './lista/lista.component';
+import { ComponentesModule } from '../componentes/componentes.module';
 
 
 
@@ -11,7 +12,8 @@ import { ListaComponent } from './lista/lista.component';
     ListaComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ComponentesModule
   ],
   exports:[
     HomeComponent,
