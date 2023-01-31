@@ -1,15 +1,18 @@
 <div class="container">
     <form [formGroup]="formRegistroUser"  >
         <div class="my-5">
-            <h2 class="text-center">USUARIO</h2>
+            <h2 class="text-center">Nuevo Usuario</h2>
         </div>
         <div class="row">
             <!------nombre------>
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="mb-3">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="nombre" placeholder="nombre" formControlName="nombre">
+                        <input type="text" class="form-control" id="nombre" placeholder="nombre" formControlName="nombre" [ngClass]="{'is-invalid':validacion('nombre'), 'is-valid':validacion('nombre')==null}">
                         <label for="nombre">Nombre</label>
+                    </div>
+                    <div class="container" style="height: 30px;" *ngIf="validacion('nombre')">
+                        <p class="text-danger">{{mensajeError.nombre}}</p>
                     </div>
                 </div>
             </div>
@@ -17,8 +20,11 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="mb-3">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="apellido" placeholder="apellido" formControlName="apellido">
+                        <input type="text" class="form-control" id="apellido" placeholder="apellido" formControlName="apellido" [ngClass]="{'is-invalid':validacion('apellido'), 'is-valid':validacion('apellido')==null}">
                         <label for="apellido">Apellido</label>
+                    </div>
+                    <div class="container" style="height: 30px;" *ngIf="validacion('apellido')">
+                        <p class="text-danger">{{mensajeError.apellido}}</p>
                     </div>
                 </div>
             </div>
@@ -26,8 +32,11 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="mb-3">
                     <div class="form-floating">
-                        <input type="email" class="form-control" id="email" placeholder="email" formControlName="email">
+                        <input type="email" class="form-control" id="email" placeholder="email" formControlName="email" [ngClass]="{'is-invalid':validacion('email'), 'is-valid':validacion('email')==null}">
                         <label for="email">Email</label>
+                    </div>
+                    <div class="container" style="height: 30px;" *ngIf="validacion('email')">
+                        <p class="text-danger">{{mensajeError.email}}</p>
                     </div>
                 </div>
             </div>
@@ -35,8 +44,11 @@
             <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="mb-3">
                     <div class="form-floating">
-                        <input type="text" class="form-control" id="website" placeholder="website" formControlName="website">
+                        <input type="text" class="form-control" id="website" placeholder="website" formControlName="website" [ngClass]="{'is-invalid':validacion('website'), 'is-valid':validacion('website')==null}">
                         <label for="website">Website</label>
+                    </div>
+                    <div class="container" style="height: 30px;" *ngIf="validacion('website')">
+                        <p class="text-danger">{{mensajeError.website}}</p>
                     </div>
                 </div>
             </div>
