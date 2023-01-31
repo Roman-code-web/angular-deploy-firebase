@@ -6,6 +6,8 @@ import { AppComponent } from './app.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
+import { PagesModule } from './pages/pages.module';
+import { ComponentesModule } from './componentes/componentes.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
     BrowserModule,
     AppRoutingModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideFirestore(() => getFirestore())
+    provideFirestore(() => getFirestore()),
+    PagesModule,
+    ComponentesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

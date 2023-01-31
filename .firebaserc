@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "sesion30-deploy": {
+      "hosting": {
+        "deploy-firebase": [
+          "sesion30-deploy"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "sesion30-deploy"
+  }
+}
